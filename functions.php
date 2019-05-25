@@ -14,4 +14,10 @@ function nukata_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'nukata_enqueue_styles');
 add_action('wp_enqueue_scripts', 'nukata_enqueue_scripts');
 
+function nukata_wp_setup( {
+  add_theme_support( 'title-tag') ;
+}
+
+add_action('after_setup_theme', 'nukata_wp_setup') ;
+
 ?>
