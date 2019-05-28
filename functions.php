@@ -24,4 +24,36 @@ function nukata_register_menu() {
   register_nav_menu('header-menu' ,__('Header Menu'));
 }
 add_action('init', 'nukata_register_menu');
+
+function nukata_widgets_init() {
+
+  register_sidebar( array(
+      'name'           => 'Footer - Copyright Text',
+      'id'             => 'footer_copyright_text',
+      'before_widget'  => 'div class="footer_copyright_text">',
+      'after_widget'   => '</div>',
+      'before_title'   => '<h4>',
+      'after_title'    => '</h4>',
+  ));
+
+}
+add_action( 'widgets_init', 'nukata_widgets_init');
+
+register_sidebar( array(
+     'name'          => 'Sidebar - Inset',
+     'id'            => 'sidebar-1',
+     'before_widget' => '<div class="sidebar-module sidebar-module-inset">',
+     'after_widget'  => '</div>',
+     'before_title'  => '<h4>',
+     'after_title'   => '</h4>',
+ ) );
+
+ register_sidebar( array(
+     'name'          => 'Sidebar - Default',
+     'id'            => 'sidebar-2',
+     'before_widget' => '<div class="sidebar-module">',
+     'after_widget'  => '</div>',
+     'before_title'  => '<h4>',
+     'after_title'   => '</h4>',
+ ) );
 ?>
