@@ -19,4 +19,9 @@ function nukata_wp_setup() {
 }
 
 add_action( 'after_setup_theme', 'nukata_wp_setup' );
+
+function nukata_register_menu() {
+  register_nav_menu('header-menu' ,__('Header Menu'));
+}
+add_action('init', 'nukata_register_menu');
 ?>
