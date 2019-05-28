@@ -177,8 +177,7 @@ h6, .h6 {
 
 /*** lyrathemes - custom styling ***/
 ul.blog-nav {
-    list-style: none;
-    display: inline;
+    list-style-type: none;
 }
 /* Nav links */
 .menu-item a{
